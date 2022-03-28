@@ -1,0 +1,3 @@
+#DON'T REMOVE THIS FILE. WILL USE THIS FOR MANGADEX API FOR BOT
+def ping_module():
+  print("Pong")

@@ -1,0 +1,15 @@
+@bot.group(invoke_without_command=True)
+async def help(ctx):
+  embed = discord.Embed(title = "Help", description = "use u!help <command> for more information on a command.", color=0xE4BAA8)
+  embed.add_field(name = "Social", value = "inspire, hug, slap, kiss, slots, 8ball, say")
+
+  await ctx.send(embed=embed)
+
+@help.command()
+async def inspire(ctx):
+    embed = discord.Embed(title = "inspire", description = "use u!inspire to get a quote of inspiration!", color=0xE4BAA8)
+    embed.add_field(name = "command", value = "u!inspire")
+
+    await ctx.send(embed=embed)
+
+    

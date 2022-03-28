@@ -1,0 +1,10 @@
+def post_avatar(self, message_object, user):
+        if user.avatar_url is None or user.avatar_url is "":
+            await self.pm.clientWrap.send_message(self.name, message_object.channel,
+                                                  user.display_name + " has no avatar set!")
+            return
+
+        em = discord.Embed(description="Avatar for " + user.display_name,
+                           colour=self.pm.clientWrap.get_color(self.name))
+        em.set_image(url=user.avatar_url)
+        await self.pm.client.send_message(message_object.channel, "", embed=em)

@@ -1,0 +1,13 @@
+#convert to def async inspire
+
+if msg.startswith("s!inspire"):
+    quote = get_quote()
+    await message.channel.send(quote)
+
+
+
+#inspire
+@bot.command
+async def inspire(ctx):
+  quote = get_quote()
+  await ctx.send(quote)

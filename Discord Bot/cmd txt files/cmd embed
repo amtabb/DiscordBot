@@ -1,0 +1,41 @@
+@bot.command()
+async def test(ctx, *args):
+    retStr = str("""```css\nThis is some colored Text```""")
+    embed = discord.Embed(title="Random test")
+    embed.add_field(name="Name field can't be colored as it seems",value=retStr)
+    await ctx.send(embed=embed)
+
+@bot.command()
+async def embed(ctx):
+    embed=discord.Embed(title="Sample Embed", url="https://realdrewdata.medium.com/", description="This is a test embed", color=0xFF5733)
+    await ctx.send(embed=embed)
+
+
+@bot.command()
+async def embed_test(ctx):
+  e = discord.Embed()
+  e.set_image(url="https://imgur.com/Agwwaj6")
+  await ctx.send(embed=embed)
+
+  @bot.command()
+async def pleasework(ctx):
+    embed=discord.Embed(title="Sample Embed", url="https://realdrewdata.medium.com/", description="This is a test embed", color=0xFF5733)
+    embed.set_thumbnail(url="https://i.pinimg.com/originals/cd/13/ad/cd13adaeb8b4208db2270d7c94963101.gif")
+    await ctx.send(embed=embed)
+
+@client.command()
+async def hug(ctx):
+    embed = discord.Embed(title = 'A hug has been sent!', description = 'warm, fuzzy and comforting <3', color = 0x83B5E3)
+    embed.random.choice(['https://media.discordapp.net/attachments/414964961953972235/570600544226508821/Server_Welcome.gif ', 'https://media.giphy.com/media/l4FGpP4lxGGgK5CBW/giphy.gif', 'https://media.giphy.com/media/fvN5KrNcKKUyX7hNIA/giphy.gif', 'https://tenor.com/view/milk-and-mocha-cuddling-hug-cute-kawaii-gif-12535135'])
+    await ctx.channel.send(embed=embed)
+
+
+#need to use import random using random.choice
+#foot needs counter
+@bot.command()
+async def embedtest(ctx, user : discord.Member):
+    embed = discord.Embed(description=f"{ctx.author.mention} has slapped {user.mention}", color=0xBAE2E4)
+    embed.set_image(url="https://i.pinimg.com/originals/cd/13/ad/cd13adaeb8b4208db2270d7c94963101.gif")
+    embed.set_footer(text="feel the pain")
+    image_properties = embed.image
+    await ctx.send(embed=embed)

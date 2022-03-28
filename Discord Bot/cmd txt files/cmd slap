@@ -1,0 +1,21 @@
+@bot.command(aliases=['slap'])
+async def _slap(ctx):
+  slapping = ['https://imgur.com/fm49srQ',
+              'https://i.pinimg.com/originals/cd/13/ad/cd13adaeb8b4208db2270d7c94963101.gif',
+              'https://imgur.com/Agwwaj6',
+              'https://media1.tenor.com/images/af36628688f5f50f297c5e4bce61a35c/tenor.gif?itemid=17314633',
+              'https://giphy.com/gifs/funimation-slap-iMCedi21L9MXg1gN43']
+  await ctx.send(f"slaps {mention}\n{random.choice(slapping)}")
+
+  
+@bot.command()
+async def embedtest(ctx, user : discord.Member):
+    embed = discord.Embed(description=f"{ctx.author.mention} has slapped {user.mention}", color=0xBAE2E4)
+    embed.set_image(url="https://i.pinimg.com/originals/cd/13/ad/cd13adaeb8b4208db2270d7c94963101.gif")
+    embed.set_footer(text="feel the pain")
+    image_properties = embed.image
+    image_properties.height = 300
+    image_properties.width = 500
+    await ctx.send(embed=embed)
+
+    

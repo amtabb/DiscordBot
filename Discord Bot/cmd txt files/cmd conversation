@@ -1,0 +1,11 @@
+#Conversation command big pain
+#find a way for the bot to recognize both caps and 
+#convert to def async(?) 
+
+  if msg.startswith("umeko"):
+    await message.channel.send("hi hi")
+    if msg.startswith("how are you?"):
+     await message.channel.send("good, you?")
+
+  if msg.startswith("Umeko"):
+    await message.channel.send("hi hi")

@@ -1,0 +1,37 @@
+1.) GET A DB system set-up for the bot to use
+    Possible Options:
+      SQLITE
+        -I feel like we can have an easier time if we use SQLITE instead of MONGODB
+        
+      MONGODB
+
+
+
+3) slap, punch, hug command which tags both author user & and user mentioned. let's also give it a nice background with a color as seen on yui bot when u use the command slap & hug = DONE 
+new task: create make the bot recognize display_user [in process]
+
+5)create reminder command, daily reminders placed specially in the server that it's asked.
+
+6) Make a constant.py file to store constant variables used in the project such as the Hatsuki guild id for ease of use and readability
+
+7.) ADD ABSTRACTION TO MAKING EMBEDS BY CONVERTING IT INTO A FUNCTION.
+
+FINISHED TASKS:
+///////////////////////////
+4) Have properties be printed in the console when a user sends a message
+for ex:
+[User] = SomeUser
+[Id_of_User] = #0000
+[Message] = message.content
+[Channel] = message.channel
+this'll make implementing chat-related stuff easier I think and would always make sure the bot is receiving the variables
+///////////////////////////
+
+///////////////////////////
+2.) Convert bot.events IF-ELSE blocks into one big method if possible and move it to a seperate .py file to import to main
+
+
+SOLVED: BY MAKING AN INDEPENDENT COG FOR IT
+
+comments: initially it was supposed to be a method but issues with varying returns such as a message string, emoji, or even an "add reaction" to messages would be hard to implement without the help of the python API wrapper.
+///////////////////////////
