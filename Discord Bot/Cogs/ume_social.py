@@ -155,20 +155,7 @@ class Social(commands.Cog):
     embed.set_footer(text=f'Requested by: {ctx.author.name}')
     await ctx.send(embed=embed)
 
-  #kiss command
-  @commands.command()
-  async def kiss(self, ctx, *, user: discord.Member):
-    chosen_image = random.choice(embedlinks.kiss_gifs)
     
-    embed = discord.Embed(description=f"{ctx.author.name} has kissed {user.name}",color=0xE4BAA8, timestamp=datetime.datetime.utcnow())
-    embed.set_image(url=chosen_image)
-    embed.set_footer(text=f'Requested by: {ctx.author.name}')
-    await ctx.send(embed=embed)
-
-    
-
-
-  
 
 def setup(bot):
     bot.add_cog(Social(bot))
