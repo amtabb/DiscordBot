@@ -34,7 +34,7 @@ bot.load_extension("Cogs.ume_helping")
 bot.load_extension("Cogs.ume_on_message_handler")
 bot.load_extension("Cogs.db_cog_experimental")
 
-# Bot events
+# Bot event
 @bot.event
 async def on_ready():
   activity_string = '{} servers.'.format(len(bot.guilds))
