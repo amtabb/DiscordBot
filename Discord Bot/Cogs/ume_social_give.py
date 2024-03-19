@@ -1,8 +1,8 @@
 import discord
 from discord.ext import commands
-import random
 import datetime
 import embedlinks
+import secrets
 
 
 # UME SOCIALS GIVE ARE FOR COMMANDS THAT ARE 'GIVABLE'
@@ -23,7 +23,7 @@ class ume_social_give(commands.Cog):
     if server_member is None:
       pass
     
-    chosen_image = random.choice(embedlinks.yumcookie)
+    chosen_image = secrets.SystemRandom().choice(embedlinks.yumcookie)
   
     embed = discord.Embed(description=f"{ctx.author.name} gave a cookie to {server_member.name}",color=0xE4BAA8, timestamp=datetime.datetime.utcnow())
     embed.set_image(url=chosen_image)
