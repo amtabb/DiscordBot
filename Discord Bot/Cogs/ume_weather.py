@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-import requests
+from security import safe_requests
 
 class Weather(commands.Cog):
   def __init__(self, bot):
@@ -15,7 +15,7 @@ class Weather(commands.Cog):
   async def weather(self, ctx, *, city: str):
     city_name = city
     complete_url = Weather.base_url + "appid=" + Weather.api_key + "&q=" + city_name
-    response = requests.get(complete_url)
+    response = safe_requests.get(complete_url)
     x = response.json()
     channel = ctx.message.channel
     if x["cod"] != "404":
